@@ -21,11 +21,9 @@ export default {
     FavoriteValue
   },
   methods: {
-    addOne() {
-      // this.$store.commit('increase', { value: 10 });
-      //Alternate way of commit
-      this.$store.commit({
-        type: 'increase', //holds the name of the mutation
+    addOne() {      
+      this.$store.dispatch({
+        type: 'increase',
         value: 10,
       });
     },
